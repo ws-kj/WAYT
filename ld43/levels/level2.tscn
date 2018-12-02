@@ -1,0 +1,209 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://block1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Ladder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Tilesetv1.tres" type="TileSet" id=7]
+
+[node name="Level" type="Node"]
+
+script = ExtResource( 1 )
+levelNum = 2
+
+[node name="GUI" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Background" parent="." index="1" instance=ExtResource( 3 )]
+
+tile_data = PoolIntArray( -786387, 0, 0, -786386, 0, 0, -786385, 0, 0, -786384, 0, 0, -786383, 0, 0, -720829, 0, 0, -720828, 0, 0, -720827, 0, 0, -720826, 0, 0, -720825, 0, 0, -720824, 0, 0, -720823, 0, 0, -720822, 0, 0, -720821, 0, 0, -655291, 0, 0, -655290, 0, 0, -655289, 0, 0, -655288, 0, 0, -655287, 0, 0, -655286, 0, 0, -655285, 0, 0, -655284, 0, 0, -655283, 0, 0, -655282, 0, 0, -589815, 0, 0, -589753, 0, 0, -589752, 0, 0, -589751, 0, 0, -589750, 0, 0, -524279, 0, 0, -524201, 0, 0, -524200, 0, 0, -524199, 0, 0, -458743, 0, 0, -458742, 0, 0, -458692, 0, 0, -458664, 0, 0, -458663, 0, 0, -458662, 0, 0, -393207, 0, 0, -393206, 0, 0, -393205, 0, 0, -393157, 0, 0, -393156, 0, 0, -393148, 0, 0, -393147, 0, 0, -393146, 0, 0, -393145, 0, 0, -393128, 0, 0, -393127, 0, 0, -393126, 0, 0, -393125, 0, 0, -393124, 0, 0, -327671, 0, 0, -327670, 0, 0, -327669, 0, 0, -327668, 0, 0, -327667, 0, 0, -327643, 0, 0, -327622, 0, 0, -327621, 0, 0, -262135, 0, 0, -262134, 0, 0, -262133, 0, 0, -262108, 0, 0, -262107, 0, 0, -262106, 0, 0, -262088, 0, 0, -262087, 0, 0, -262086, 0, 0, -262085, 0, 0, -196598, 0, 0, -196573, 0, 0, -196572, 0, 0, -196571, 0, 0, -196552, 0, 0, -196550, 0, 0, -131062, 0, 0, -131038, 0, 0, -131037, 0, 0, -131036, 0, 0, -131017, 0, 0, -131016, 0, 0, -131014, 0, 0, -65506, 0, 0, -65503, 0, 0, -65502, 0, 0, -65480, 0, 0, -65479, 0, 0, 33, 0, 0, 91, 0, 0, 65547, 0, 0, 65562, 0, 0, 65563, 0, 0, 65564, 0, 0, 65565, 0, 0, 65627, 0, 0, 131099, 0, 0, 131100, 0, 0, 131101, 0, 0, 131130, 0, 0, 131131, 0, 0, 131145, 0, 0, 131148, 0, 0, 131149, 0, 0, 131150, 0, 0, 131151, 0, 0, 131152, 0, 0, 131153, 0, 0, 131154, 0, 0, 131162, 0, 0, 131163, 0, 0, 196621, 0, 0, 196665, 0, 0, 196666, 0, 0, 196681, 0, 0, 196686, 0, 0, 196687, 0, 0, 196688, 0, 0, 196689, 0, 0, 196698, 0, 0, 196699, 0, 0, 262189, 0, 0, 262190, 0, 0, 262191, 0, 0, 262192, 0, 0, 262193, 0, 0, 262217, 0, 0, 262224, 0, 0, 262234, 0, 0, 262235, 0, 0, 327702, 0, 0, 327724, 0, 0, 327725, 0, 0, 327726, 0, 0, 327727, 0, 0, 327753, 0, 0, 327754, 0, 0, 327760, 0, 0, 327770, 0, 0, 393238, 0, 0, 393259, 0, 0, 393260, 0, 0, 393261, 0, 0, 393262, 0, 0, 393288, 0, 0, 393290, 0, 0, 458773, 0, 0, 458794, 0, 0, 458795, 0, 0, 458796, 0, 0, 458797, 0, 0, 458802, 0, 0, 458803, 0, 0, 458824, 0, 0, 458826, 0, 0, 524309, 0, 0, 524330, 0, 0, 524337, 0, 0, 524362, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589844, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655380, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720916, 0, 0, 786441, 0, 0, 786452, 0, 0 )
+
+[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 100, 250 )
+
+[node name="Blocks" type="Node" parent="." index="3"]
+
+editor/display_folded = true
+
+[node name="block1" parent="Blocks" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 320, 128 )
+
+[node name="block2" parent="Blocks" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 384, 128 )
+
+[node name="block3" parent="Blocks" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 448, 128 )
+
+[node name="block4" parent="Blocks" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 512, 128 )
+
+[node name="block5" parent="Blocks" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 768, 448 )
+
+[node name="block6" parent="Blocks" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 832, 448 )
+
+[node name="block7" parent="Blocks" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 896, 448 )
+
+[node name="block8" parent="Blocks" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 960, 448 )
+
+[node name="block9" parent="Blocks" index="8" instance=ExtResource( 5 )]
+
+position = Vector2( 1216, 192 )
+
+[node name="block10" parent="Blocks" index="9" instance=ExtResource( 5 )]
+
+position = Vector2( 1216, -128 )
+
+[node name="block11" parent="Blocks" index="10" instance=ExtResource( 5 )]
+
+position = Vector2( 1472, -320 )
+
+[node name="block12" parent="Blocks" index="11" instance=ExtResource( 5 )]
+
+position = Vector2( 1536, -320 )
+
+[node name="block13" parent="Blocks" index="12" instance=ExtResource( 5 )]
+
+position = Vector2( 1600, -320 )
+
+[node name="block14" parent="Blocks" index="13" instance=ExtResource( 5 )]
+
+position = Vector2( 1664, -320 )
+
+[node name="block15" parent="Blocks" index="14" instance=ExtResource( 5 )]
+
+position = Vector2( 1984, 320 )
+
+[node name="block16" parent="Blocks" index="15" instance=ExtResource( 5 )]
+
+position = Vector2( 2048, 320 )
+
+[node name="block17" parent="Blocks" index="16" instance=ExtResource( 5 )]
+
+position = Vector2( 2112, 320 )
+
+[node name="block18" parent="Blocks" index="17" instance=ExtResource( 5 )]
+
+position = Vector2( 2176, 320 )
+
+[node name="block19" parent="Blocks" index="18" instance=ExtResource( 5 )]
+
+position = Vector2( 2240, 320 )
+
+[node name="block20" parent="Blocks" index="19" instance=ExtResource( 5 )]
+
+position = Vector2( 2432, 128 )
+
+[node name="block21" parent="Blocks" index="20" instance=ExtResource( 5 )]
+
+position = Vector2( 2496, 64 )
+
+[node name="block22" parent="Blocks" index="21" instance=ExtResource( 5 )]
+
+position = Vector2( 2496, 64 )
+
+[node name="block23" parent="Blocks" index="22" instance=ExtResource( 5 )]
+
+position = Vector2( 2560, 0 )
+
+[node name="block24" parent="Blocks" index="23" instance=ExtResource( 5 )]
+
+position = Vector2( 2816, -192 )
+
+[node name="block25" parent="Blocks" index="24" instance=ExtResource( 5 )]
+
+position = Vector2( 2880, -192 )
+
+[node name="block26" parent="Blocks" index="25" instance=ExtResource( 5 )]
+
+position = Vector2( 2944, -192 )
+
+[node name="block27" parent="Blocks" index="26" instance=ExtResource( 5 )]
+
+position = Vector2( 3008, -192 )
+
+[node name="block28" parent="Blocks" index="27" instance=ExtResource( 5 )]
+
+position = Vector2( 3072, -192 )
+
+[node name="block29" parent="Blocks" index="28" instance=ExtResource( 5 )]
+
+position = Vector2( 3072, -192 )
+
+[node name="block30" parent="Blocks" index="29" instance=ExtResource( 5 )]
+
+position = Vector2( 3584, 448 )
+
+[node name="block31" parent="Blocks" index="30" instance=ExtResource( 5 )]
+
+position = Vector2( 3648, 448 )
+
+[node name="block32" parent="Blocks" index="31" instance=ExtResource( 5 )]
+
+position = Vector2( 3712, 448 )
+
+[node name="block33" parent="Blocks" index="32" instance=ExtResource( 5 )]
+
+position = Vector2( 4160, 192 )
+
+[node name="block34" parent="Blocks" index="33" instance=ExtResource( 5 )]
+
+position = Vector2( 4160, -192 )
+
+[node name="block35" parent="Blocks" index="34" instance=ExtResource( 5 )]
+
+position = Vector2( 4672, -192 )
+
+[node name="block36" parent="Blocks" index="35" instance=ExtResource( 5 )]
+
+position = Vector2( 4736, -192 )
+
+[node name="block37" parent="Blocks" index="36" instance=ExtResource( 5 )]
+
+position = Vector2( 4800, -192 )
+
+[node name="block38" parent="Blocks" index="37" instance=ExtResource( 5 )]
+
+position = Vector2( 4864, -192 )
+
+[node name="Ladder" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 5248, -128 )
+
+[node name="TileMap" type="TileMap" parent="." index="5"]
+
+mode = 0
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -458724, 0, 0, -458695, 0, 0, -393188, 0, 0, -393159, 0, 0, -327652, 0, 0, -327623, 0, 0, -262116, 0, 0, -262087, 0, 0, -196580, 0, 0, -196551, 0, 0, -131044, 0, 0, -131015, 0, 0, -65508, 0, 0, -65479, 0, 0, -65455, 0, 0, -65454, 0, 0, -65453, 0, 0, -65452, 0, 0, -65451, 0, 0, 28, 0, 0, 57, 0, 0, 65564, 0, 0, 131100, 0, 0, 196636, 0, 0, 262172, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327708, 0, 0, 393244, 0, 0, 458780, 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+

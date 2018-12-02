@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://block1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Ladder.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tilesetv1.tres" type="TileSet" id=6]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=7]
+
+[node name="Level" type="Node" index="0"]
+
+script = ExtResource( 1 )
+levelNum = 5
+
+[node name="Background" parent="." index="0" instance=ExtResource( 2 )]
+
+tile_data = PoolIntArray( -2949116, 0, 0, -2883581, 0, 0, -2883580, 0, 0, -2818046, 0, 0, -2818045, 0, 0, -2752510, 0, 0, -2686966, 0, 0, -2686965, 0, 0, -2621430, 0, 0, -2555894, 0, 0, -2555893, 0, 0, -2555892, 0, 0, -2555891, 0, 0, -2490359, 0, 0, -2490358, 0, 0, -2424823, 0, 0, -2097140, 0, 0, -2097139, 0, 0, -2031603, 0, 0, -1966068, 0, 0, -1966067, 0, 0, -1966066, 0, 0, -1900533, 0, 0, -1900530, 0, 0, -1835004, 0, 0, -1834995, 0, 0, -1834994, 0, 0, -1769468, 0, 0, -1703932, 0, 0, -1638397, 0, 0, -1310714, 0, 0, -1310713, 0, 0, -1310712, 0, 0, -1310711, 0, 0, -1245177, 0, 0, -1245176, 0, 0, -1245175, 0, 0, -1245174, 0, 0, -1245173, 0, 0, -1245172, 0, 0, -1179641, 0, 0, -1179640, 0, 0, -1114105, 0, 0, -983027, 0, 0, -917490, 0, 0, -851954, 0, 0, -851953, 0, 0, -786417, 0, 0, -786416, 0, 0, -720894, 0, 0, -720893, 0, 0, -720880, 0, 0, -655357, 0, 0, -458745, 0, 0, -393210, 0, 0, -327674, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, 65548, 0, 0, 131082, 0, 0, 131083, 0, 0, 196618, 0, 0, 458758, 0, 0, 458759, 0, 0, 524295, 0, 0, 589831, 0, 0, 589832, 0, 0 )
+
+[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 100, 250 )
+
+[node name="Blocks" type="Node" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="block1" parent="Blocks" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 320, 64 )
+
+[node name="block2" parent="Blocks" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 576, -128 )
+
+[node name="block3" parent="Blocks" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 192, -448 )
+
+[node name="block4" parent="Blocks" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 704, -576 )
+
+[node name="block5" parent="Blocks" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 320, -768 )
+
+[node name="block6" parent="Blocks" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 640, -960 )
+
+[node name="block7" parent="Blocks" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 192, -1152 )
+
+[node name="block8" parent="Blocks" index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 576, -1408 )
+
+[node name="block9" parent="Blocks" index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 576, -1728 )
+
+[node name="block10" parent="Blocks" index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 448, -1984 )
+
+[node name="block11" parent="Blocks" index="10" instance=ExtResource( 4 )]
+
+position = Vector2( 704, -2240 )
+
+[node name="Ladder" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 320, -2432 )
+
+[node name="TileMap" type="TileMap" parent="." index="4"]
+
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -2424832, 0, 0, -2424831, 0, 0, -2424830, 0, 0, -2424829, 0, 0, -2424828, 0, 0, -2424827, 0, 0, -2424826, 0, 0, -2424825, 0, 0, -2359296, 0, 0, -2293760, 0, 0, -2228224, 0, 0, -2162688, 0, 0, -2097152, 0, 0, -2031616, 0, 0, -1966080, 0, 0, -1900544, 0, 0, -1835008, 0, 0, -1769472, 0, 0, -1703936, 0, 0, -1638400, 0, 0, -1572864, 0, 0, -1507328, 0, 0, -1441792, 0, 0, -1376256, 0, 0, -1310720, 0, 0, -1245184, 0, 0, -1179648, 0, 0, -1114112, 0, 0, -1048576, 0, 0, -983040, 0, 0, -983039, 0, 0, -983038, 0, 0, -983037, 0, 0, -983036, 0, 0, -917504, 0, 0, -851968, 0, 0, -786432, 0, 0, -720896, 0, 0, -655360, 0, 0, -589824, 0, 0, -524288, 0, 0, -458752, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0 )
+
+[node name="GUI" parent="." index="5" instance=ExtResource( 7 )]
+
+

@@ -1,0 +1,31 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="WAYT"
+run/main_scene="res://MainMenu.tscn"
+boot_splash/image="res://art/bg.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://art/char_right.png"
+
+[autoload]
+
+Global="*res://Global.tscn"
+
+[display]
+
+window/size/height=640
+window/stretch/mode="viewport"
+
+[rendering]
+
+environment/default_clear_color=Color( 0.15625, 0.140991, 0.140991, 1 )
+environment/default_environment="res://default_env.tres"
